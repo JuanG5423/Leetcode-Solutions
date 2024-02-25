@@ -4,7 +4,7 @@ def factorial(n):
     else:
         return n * factorial(n-1)
 
-print(factorial(6))
+print(factorial(998))
 
 '''
 Recursion practice:
