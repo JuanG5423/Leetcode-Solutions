@@ -22,22 +22,3 @@ class Solution:
                 count += 1
                 
         return max(lengths) if lengths else 0
-
-def longest_substring(s):
-    sub_string = ""
-    right = 1
-    max_length = 1
-    char_set = set([])
-    for left in range(len(s)):
-        if s[left:right] not in char_set:
-            sub_string += s[left:right]
-        else:
-            if len(sub_string) > max_length:
-                max_length = len(sub_string)
-                sub_string = ""
-        right += 1
-    if len(sub_string) > max_length:
-        max_length = len(sub_string)
-    return max_length
-
-print(longest_substring("abcabcbb"))
